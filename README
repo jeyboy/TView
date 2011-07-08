@@ -1,1 +1,21 @@
-begin date 13 nov 2010
+1)	chooce folder
+2)	git clone git@github.com:jeyboy/TView.git TView
+
+3)	sudo apt-get install postgresql
+	sudo apt-get install pgadmin3
+	
+4)	sudo -u postgres psql postgres
+
+	Set a password for the "postgres" database role using the command:
+
+	\password postgres
+
+	and give your password when prompted. The password text will be hidden from the console for security purposes.
+
+	Type Control+D to exit the posgreSQL prompt.
+
+5)	cd TView
+6)	bundle install
+7)	rake db:create
+8)	rake db:migrate
+9)	rails s
