@@ -14,8 +14,9 @@
 
 	Type Control+D to exit the posgreSQL prompt.
 
-5)	cd TView
+5)	cd TVie
 6)	bundle install
 7)	rake db:create
 8)	rake db:migrate
-9)	rails s
+9)	rake data:reset_admin
+10)	rails s
