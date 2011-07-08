@@ -1,0 +1,14 @@
+.block{:id => "group"}
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", admin_template_index_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_template_path
+      %li.active= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_template_path
+
+  
+  .content
+    .inner
+      %iframe(name="iframe" id="view" src="#{@tmpl.template_link.gsub("public","")}" frameborder="0" border="0" width="60%" height = "1024px" scrolling="no")
+      .wat-cf
+        = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_admin_path(@admin), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+  - content_for :sidebar, render(:partial => 'sidebar')

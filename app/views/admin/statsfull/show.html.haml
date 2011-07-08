@@ -1,0 +1,41 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.new", :default => "Small statistic")}", admin_statsfull_small_path        
+      %li.active= link_to "#{t("web-app-theme.list", :default => "Full statistic")}", admin_statsfull_index_path
+    .secondary-navigation
+      %ul.wat-cf
+        %li.first.active=link_to "#{t("web-app-theme.new", :default => "Show")}", admin_statsfull_show_path
+  .content
+    %h2.title
+      = "User #{@userstat.user_ip} Statistic"
+      .group
+        = "User Browser: #{@userstat.browser}"
+      .group
+        = "User went from: #{@userstat.went_from}"
+    .inner{:style => "float: left"}
+      %table.table
+        %tr
+          %th="Which template viewed?"
+          %th.last
+        - @userstat.view_templates.each do |tmpl|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = tmpl.viewed_id
+            %td.last
+              = checker(tmpl.viewed_id)
+    .inner{:style => "float: left"}
+      %table.table
+        %tr
+          %th="Which template downloaded?"
+          %th.last
+        - @userstat.download_templates.each do |tmpl|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = tmpl.download_id
+            %td.last
+              = checker(tmpl.download_id)
+    .clear
+      .actions-bar.wat-cf
+        .actions
+- content_for :sidebar, render(:partial => 'sidebar',:locals => {:path => admin_statsfull_show_path})

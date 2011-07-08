@@ -1,0 +1,14 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", admin_template_index_path
+      %li.active= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_template_path
+  .content
+    %h2.title
+      = t("web-app-theme.new", :default => "New")
+      Template
+    .inner
+      - @g_id
+      = form_for :admin, :url => admin_template_index_path, :html =>{ :multipart => true } do |f|
+        = render :partial => "form", :locals => {:f => f,:group_id => @g_id}
+- content_for :sidebar, render(:partial => 'sidebar')

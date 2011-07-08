@@ -1,0 +1,272 @@
+/* ----- main styles ----- */
+* { margin: 0px; padding: 0px; }
+html { width: 100%; height: 100%; }
+body { font-family: Arial; font-size: 9pt; height: 100%; width: 100%; color: #000; }
+
+a { outline: none; -moz-outline: 0; border: none; border-width: 0px; }
+a:active { outline: none; -moz-outline: 0; }
+a:focus { outline: none; -moz-outline: 0; }
+a { color: #000; text-decoration: underline; }
+a:hover { text-decoration: none; }
+
+img { border: none; border-width: 0px; }
+h1, h2, h3, h4, h5, h6 { color: #272727; font-family: Arial; font-size: 12pt; padding: 0px 0px 10px 0px; }
+p { padding: 0px 0px 15px 0px; }
+ol { margin: 0px 0px 10px 10px; }
+ul { margin: 0px 0px 10px 10px; }
+li { margin: 5px 0px 10px 15px; }
+table { border-collapse: collapse; }
+input, select, textarea { font-family: tahoma; font-size: 8pt; color: #000000; }
+.clear { clear: both; font-size: 0pt; line-height: 0px; height: 0px; }
+.w100pr { width: 100%; }
+.rel { position: relative; }
+
+/* ----- panel ----- */
+#panel { padding: 40px 0 0 0; top: 0px; position: fixed; z-index: 999; min-width: 1000px; width: 100%; }
+*html #panel { position: absolute; top:expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop : document.body.scrollTop); }
+*html #panel { width:expression((document.compatMode && document.compatMode == 'CSS1Compat') ?
+				(document.documentElement.clientWidth < 1000 ? "1000px" : "100%") :
+				(document.body.clientWidth < 1000 ? "1000px" : "100%")); }
+
+/* ----- top-line ----- */
+.top-line { width: 100%; height: 46px; left: 0px; top: 0px; position: absolute; background: url("../images/top-line-bk.png") repeat-x; z-index: 999; }
+.top-line-c { width: 384px; height: 25px; padding: 20px 0 0 0; margin: 0 auto; background: url("../images/top-line-c.png") no-repeat; 
+				font-family: Georgia; font-size: 10.5pt; color: #000; text-align: center; font-weight: bold; }
+
+/* ----- top-tabs ----- */
+#top-tabs { position: relative; z-index: 99; }
+.ttl { width: 23px; background: url("../images/top-tab-l.png") right 0 no-repeat; height: 205px; }
+.ttc { background: url("../images/top-tab-c.gif") 0 bottom repeat-x; height: 205px; }
+.ttcl { background: url("../images/top-tab-cl.gif") 0 bottom no-repeat; }
+.ttcr { background: url("../images/top-tab-cr.gif") right bottom no-repeat; height: 205px; }
+.ttcc { position: relative; padding: 10px 166px 0 0; height: 195px; }
+.ttr { width: 23px; background: url("../images/top-tab-r.png") no-repeat; height: 205px; }
+
+/* ----- topgal
+#topgal { position: relative; height: 179px; overflow: hidden; padding: 0 20px; }
+#topgal ul { list-style: none; margin: 0; }
+#topgal li { margin: 0 0px 0 0; padding: 5px; width: 173px; height: 169px; float: left; 
+			background: url("../images/tt-li.png") no-repeat; text-align: center; }
+ ----- */
+
+
+#bts1in, #bts2in, #bts3in { height: 179px; }
+#bts2in, #bts3in { display: none; }
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 736px;
+    padding: 0 24px;
+}
+
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    width: 75px;
+    height: 245px;
+    padding: 40px 20px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  736px;
+    height: 179px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    width:  75px;
+    height: 245px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+	padding: 5px;
+	text-align: center;
+	width: 173px; 
+	height: 169px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin:0 1px 0 0;
+	background: url("../images/tt-li.png") no-repeat;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-vertical {
+    margin-bottom: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 74px;
+    right: -5px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    background: url("../images/arr-r.png") no-repeat;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+    background: url("../images/arr-ra.png") no-repeat;
+}
+/*
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    background-position: -64px 0;
+}
+*/
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+	background: none;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 74px;
+    left: -5px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    background: url("../images/arr-l.png") no-repeat;
+}
+/*
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.png);
+}
+*/
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+    background: url("../images/arr-la.png") no-repeat;
+}
+/*
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    background-position: -64px 0;
+}
+*/
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+	background: none;
+}
+
+/**
+ *  Vertical Buttons
+ */
+ /*
+.jcarousel-skin-tango .jcarousel-next-vertical {
+    position: absolute;
+    bottom: 5px;
+    left: 43px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(next-vertical.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-vertical:hover {
+    background-position: 0 -32px;
+}
+
+.jcarousel-skin-tango .jcarousel-next-vertical:active {
+    background-position: 0 -64px;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:active {
+    cursor: default;
+    background-position: 0 -96px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical {
+    position: absolute;
+    top: 5px;
+    left: 43px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(prev-vertical.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:hover {
+    background-position: 0 -32px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:active {
+    background-position: 0 -64px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:active {
+    cursor: default;
+    background-position: 0 -96px;
+}
+
+
+*/
+
+.download-but { right: 11px; top: 67px; position: absolute; }
+/* ----- stylish select ----- */
+.h-dropdown { right: 11px; top: 173px; position: absolute; font-family: Georgia; font-size: 13.5pt; }
+.stylish-select .newListSelected * { list-style:none; height:auto; display:block; width: 182px; margin:0; padding:0;  border:none; text-align:left !important;}
+.stylish-select .newListSelected { float:left; background: url("../images/theme.png") no-repeat; height: 29px; padding: 5px 0 0 15px; margin-top:1px; width: 167px; }
+.stylish-select .newListSelected div { overflow: hidden; cursor: pointer; }
+.stylish-select  ul.newList { border: 1px solid #aabcca; position:absolute;  z-index:9999; margin-top:0px; padding: 0 0 5px 0; 
+								width:150px !important; left: 10px !important; top: 32px !important; }
+.stylish-select  ul.newList li { width:150px !important }
+.stylish-select  ul.newList li a { background: #fff; width:145px !important; padding: 0 0 0 5px; text-decoration: none; }
+.stylish-select .hiLite,
+.stylish-select .hiLite a{ background:#fff!important;  color: red !important; cursor:pointer !important; }
+.stylish-select .newListHover {background:#dcdfdd!important; color:#000!important; cursor:pointer;}
+
+
+
+/* ----- bot-tabs ----- */
+.bot-tabs { height: 21px; position: relative; font-size: 10.5pt; font-family: Georgia;  }
+.bot-tabs table { width: 100%; }
+.btl { width: 30px; height: 21px; background: url("../images/bot-tab-l.png") right 0 no-repeat; }
+.btc { background: url("../images/bot-tab.png") repeat-x; height: 21px; }
+.btr { width: 30px; height: 21px; background: url("../images/bot-tab-r.png") no-repeat; }
+.bts { left: 30px; top: 8px; position: absolute; background: url("../images/bts.png") no-repeat; width: 461px; height: 52px; padding: 0px 0 0 10px; }
+.bts a { display: block; width: 150px; height: 40px; padding: 6px 0 0 0; float: left; text-align: center; color: #fff; text-decoration: none; }
+.bts a:hover { color: #000; }
+.bts .btsact { color: #000; height: 42px; padding: 4px 0 0 0; }
+
+/* ----- special classes styles ----- */
+.main { position: relative; min-width: 1000px; padding-top: 90px; }
+*html .main { width:expression((document.compatMode && document.compatMode == 'CSS1Compat') ?
+				(document.documentElement.clientWidth < 1000 ? "1000px" : "100%") :
+				(document.body.clientWidth < 1000 ? "1000px" : "100%")); }
+
+
+
+
+
+/* -----
+.field, x:-moz-any-link {  }
+*html .field {  }
+*:first-child+html .field {  }
+  ----- */

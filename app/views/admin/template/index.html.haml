@@ -1,0 +1,43 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", admin_template_index_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_template_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      Templates
+    .inner
+      %table.table
+        %tr
+          %th= "ID"
+          %th= "Group ID"
+          %th= "Image"
+          %th= "Template files path"         
+          %th= "Image template folder"
+          %th= "Created at"
+          %th.last
+        - @templategroups.each do |tmpl|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = tmpl.id
+            %td
+              = tmpl.group_id
+            %td
+              = image_tag(tmpl.img_template)
+            %td
+              = tmpl.template_link        
+            %td
+              = tmpl.folder_template
+            %td
+              = l(tmpl.created_at, :format => :long)
+
+            %td.last
+              = link_to "Show", admin_template_path(tmpl)
+              \
+              |
+              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_template_path(tmpl), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      .actions-bar.wat-cf
+        .actions
+        = will_paginate @templategroups
+- content_for :sidebar, render(:partial => 'sidebar')

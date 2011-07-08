@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %title Admin Panel    
+    = javascript_include_tag :defaults, "graph.js"
+    = csrf_meta_tag
+    = stylesheet_link_tag "web-app-theme/base.css", "web-app-theme/themes/warehouse/style.css", "web-app-theme/override.css"
+  %body
+    #container
+      #header
+        %h1
+          %a{:href => "/admin/"} Admin Panel
+        #user-navigation
+          %ul.wat-cf 
+            %li 
+              =link_to t("web-app-theme.logout", :default => "Logout"), destroy_auth_session_path, :class => "logout"
+        #main-navigation
+          %ul.wat-cf
+            %li
+              %a{:href => "/"} Main Page
+            %li
+              %a.admin{:href => "/admin/"} Groups            
+            %li
+              %a{:href => "/admin/template/"} Templates            
+            %li
+              %a{:href => "/admin/statsfull/small"} Stats
+
+        
+        
+          - if flash[:error]
+            .flash
+              .error
+                = flash[:error]
+                - flash[:error]=nil
+        #main
+          = yield
+          #footer
+            .block
+              %p
+                Copyright &copy; #{Time.now.year} Admin Panel.
+        #sidebar
+          = yield :sidebar

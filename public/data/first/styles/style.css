@@ -1,0 +1,83 @@
+/* ----- main styles ----- */
+* { margin: 0px; padding: 0px; }
+html { width: 100%; height: 100%; }
+body { font-family: "Myriad Pro"; font-size: 9pt; height: 100%; width: 100%; color: #262223; background: #f9f6f6; }
+
+a { outline: none; -moz-outline: 0; border: none; border-width: 0px; }
+a:active { outline: none; -moz-outline: 0; }
+a:focus { outline: none; -moz-outline: 0; }
+a { color: #f1612d; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { border: none; border-width: 0px; }
+h1, h2, h3 { color: #f1612d; font-family: "Myriad Pro"; font-size: 12pt; padding: 0px 0px 5px 0px; }
+h1 { text-align: center; }
+h2 { text-transform: uppercase; }
+h4, h5, h6 { font-size: 9pt; color: #f1612d; font-family: "Myriad Pro"; padding: 0px 0px 5px 0px; }
+p { padding: 0px 0px 5px 0px; }
+ol { margin: 0px 0px 5px 10px; }
+ul { margin: 0px 0px 5px 10px; }
+li { margin: 5px 0px 5px 15px; }
+table { border-collapse: collapse; }
+input, select, textarea { font-family: tahoma; font-size: 8pt; color: #000000; }
+.clear { clear: both; font-size: 0pt; line-height: 0px; height: 0px; }
+
+/* ----- special classes styles ----- */
+.main { position: relative; width: 730px; margin: 0 auto; background: url("../images/c-bk.png") 177px 0 repeat-y; }
+.main-r { background: url("../images/c-bk.png") 523px 0 repeat-y; }
+/*
+body {
+	 An explicit background color needed for the Safari browser. 
+	 Without this, Safari users will see black in the corners. 
+	background: green;
+}*/
+.rounded { margin: 0 0 15px 0; }
+
+.pink-block { background: #f8eae5; padding: 10px;  }
+.pink-block img { border: 1px solid #f8cfc1; float: left; margin: 0 10px 10px 10px; }
+ 
+.more { color: #f1612d; text-decoration: none; }
+.orange-block { background: url("../images/arr.gif") right center no-repeat #f15922; color: #fff; padding: 5px 30px 5px 10px; font-size: 13pt; }
+.sm-blocks { padding: 0 0 15px 0; }
+.sm-block { color: #2a2728; background: #eef0f0; padding: 10px; width: 135px; margin: 0 5px 10px 5px; float: left; }
+.sm-block-last { margin-right: 0; }
+
+.h-menu { background: url("../images/h-menu.png") repeat-x; height: 61px; padding: 1px 18px 19px 18px; margin: 0 0 5px 0; 
+			text-align: center; font-size: 12pt; line-height: 61px; }
+.h-menu table { margin: 0 auto; height: 61px; }
+.h-menu td { padding: 0 10px; border-right: 1px solid #f6f7f8; border-left: 1px solid #f6f7f8; }
+.h-menu .act { border-right: 1px solid #edeeef; border-left: 1px solid #edeeef; }
+.h-menu a { color: #1c1819; }
+.h-menu .act a { color: #f1612d; }
+
+.c-menu { font-size: 13pt; padding: 10px; background: #eef0f0; }
+.c-menu ul { margin: 0; list-style: none; }
+.c-menu li { margin: 0 0 0 0; padding: 0 0 5px 0; }
+.c-menu a { color: #2a2728; border-bottom: 2px solid #eef0f0; }
+.c-menu a:hover { border-bottom: 2px dotted #f1612d; }
+.c-menu a:hover { text-decoration: none; }
+.c-menu .act a { border-bottom: 2px dotted #f1612d; }
+
+
+.topimg { height: 266px; background: url("../images/pic000.jpg") no-repeat; }
+
+.foot { position: relative; padding: 13px 160px 10px 20px; height: 94px; background: url("../images/foot.gif") repeat-x; }
+.foot table { width: 100%; }
+.foot td { height: 97px; }
+.foottop { right: 23px; top: 57px; position: absolute; }
+.foot ul { margin: 0 0 0 0; list-style: none; float: right; width: 100px; }
+.foot li { margin: 0; padding: 0 0 0 10px; background: url("../images/f-li.gif") 0 center no-repeat; }
+.foot a { color: #fff; }
+.foot a:hover {  }
+
+
+.left { float: left; width: 160px; padding: 0 40px 0 10px; }
+.right { float: left; width: 160px; padding: 0 10px 0 40px; }
+.center { float: left; width: 500px; padding: 0 10px 0 10px; }
+
+
+/* -----
+.field, x:-moz-any-link {  }
+*html .field {  }
+*:first-child+html .field {  }
+  ----- */

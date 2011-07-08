@@ -1,0 +1,41 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", admin_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_admin_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      Groups
+    .inner
+      %table.table
+        %tr
+          %th.first ID
+          %th= "Tag"
+          %th= "Image"
+          %th= "Project dir"
+          %th= "Project Name"
+          %th= "Created at"
+          %th.last
+        - @groups.each do |group|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = group.id
+            %td
+              = group.tag
+            %td
+              = image_tag(group.img_url)
+            %td
+              = group.dir_project
+            %td
+              = group.name_project
+            %td
+              = l(group.created_at, :format => :long)
+            %td.last
+              = link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_admin_path(group)
+              |
+              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_admin_path(group), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      .actions-bar.wat-cf
+        .actions
+        = will_paginate @groups
+- content_for :sidebar, render(:partial => 'sidebar')

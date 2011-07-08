@@ -1,0 +1,75 @@
+<!-- panel start -->
+
+<div id="panel">
+
+  <!-- top-line start -->
+  <div class="top-line"><div class="top-line-c">
+			Tview
+    </div></div>
+  <!-- top-line end -->
+
+  <!-- top-tabs start -->
+  <div id="top-tabs">
+
+    <table class="w100pr">
+      <tr>
+        <td class="ttl">&nbsp;</td>
+        <td class="ttc">
+          <div class="ttcl"><div class="ttcr"><div class="ttcc">
+                <div id="bts1in">
+                  <ul id="topgal" class="jcarousel-skin-tango">
+                    <li class="item"><a href="#"><img src="images/user/thumbs/thumb001.gif" width="166" height="161" alt="" /></a></li>
+                  </ul>
+                </div>
+                <div id="bts2in">
+                </div>
+                <div id="bts3in">
+                </div>
+                <a href="#"><img src="images/download-but.gif" width="150" height="50" alt="" class="download-but" /></a>
+                <div class="h-dropdown">
+                  <select class="dropdown" name="" style="width: 182px;" onchange="select()" >
+                    <option value="FAQ">FAQ</option>
+                    <%- @groups.each do|group|   %>
+                    <option value="<%=group.tag%>"><%=group.tag%></option>
+                    <%end%>
+                  </select>
+                  <div class="clear"></div>
+                </div>
+              </div></div></div>
+        </td>
+        <td class="ttr">&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+  <!-- top-tabs end -->
+
+  <!-- bot-tabs start -->
+
+  <div class="bot-tabs">
+    <table>
+      <tr>
+        <td class="btl">&nbsp;</td>
+        <td class="btc">&nbsp;</td>
+        <td class="btr">&nbsp;</td>
+      </tr>
+    </table>
+    <div class="bts">
+
+      <a href="#" id="bts1">Template</a>
+      <a href="#" id="bts2">Position</a>
+      <a href="#" id="bts3">Color</a>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!-- bot-tabs end -->
+
+</div>
+<!-- panel end -->
+
+
+<!-- main styles -->
+<div class="main index">
+  <iframe name="iframe" id="view" src="manual.html" frameborder="0" border="0" width="100%" scrolling="no" style="margin-top: -50px; height: 1000px" ></iframe>
+
+</div>
+<!-- /main styles -->
