@@ -25,7 +25,7 @@ group :test do
   gem "test-unit", :require => "test/unit"
   gem 'factory_girl_rails'
   gem 'shoulda'
-  gem 'timecop'
+#  gem 'timecop'
   gem 'ruby-graphviz', :require => 'graphviz'
  
 end
