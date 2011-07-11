@@ -98,7 +98,6 @@ GEM
     tzinfo (0.3.24)
     warden (1.0.3)
       rack (>= 1.0.0)
-    web-app-theme (0.6.3)
     will_paginate (3.0.pre2)
 
 PLATFORMS
@@ -120,5 +119,4 @@ DEPENDENCIES
   shoulda
   test-unit
   timecop
-  web-app-theme
   will_paginate (= 3.0.pre2)
